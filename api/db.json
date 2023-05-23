@@ -1,0 +1,100 @@
+{
+  "properties": [
+    {
+      "id": 1,
+      "title": "Cozy Studio Apartment",
+      "description": "A comfortable studio apartment in the heart of the city.",
+      "averageNightPrice": 80,
+      "location": "New York",
+      "amenities": ["WiFi", "Kitchenette", "Air Conditioning"],
+      "rating": 4.5,
+      "coordinates": {
+        "latitude": 40.7128,
+        "longitude": -74.006
+      },
+      "categories": [
+        { "id": 1, "name": "City" },
+        { "id": 2, "name": "Apartment" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Luxurious Beachfront Villa",
+      "description": "A stunning villa with direct access to the beach and panoramic ocean views.",
+      "averageNightPrice": 350,
+      "location": "Malibu",
+      "amenities": ["Private Pool", "Gym", "Ocean View"],
+      "rating": 5.0,
+      "coordinates": {
+        "latitude": 34.0259,
+        "longitude": -118.7798
+      },
+      "categories": [
+        { "id": 3, "name": "Beach" },
+        { "id": 4, "name": "Villa" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Charming Cottage in the Countryside",
+      "description": "Escape to this peaceful cottage surrounded by nature and enjoy a relaxing getaway.",
+      "averageNightPrice": 120,
+      "location": "Cotswolds",
+      "amenities": ["Fireplace", "Garden", "Pet-Friendly"],
+      "rating": 4.8,
+      "coordinates": {
+        "latitude": 51.8787,
+        "longitude": -1.791
+      },
+      "categories": [
+        { "id": 5, "name": "Countryside" },
+        { "id": 6, "name": "Cottage" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Modern Loft in the City Center",
+      "description": "Experience urban living in this stylish loft located in the heart of downtown.",
+      "averageNightPrice": 150,
+      "location": "San Francisco",
+      "amenities": ["Balcony", "Gym", "City View"],
+      "rating": 4.7,
+      "coordinates": {
+        "latitude": 37.7749,
+        "longitude": -122.4194
+      },
+      "categories": [
+        { "id": 1, "name": "City" },
+        { "id": 7, "name": "Loft" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Rustic Cabin in the Woods",
+      "description": "Get away from it all and unwind in this cozy cabin nestled in the forest.",
+      "averageNightPrice": 100,
+      "location": "Aspen",
+      "amenities": ["Hot Tub", "Fire Pit", "Mountain View"],
+      "rating": 4.6,
+      "coordinates": {
+        "latitude": 39.1911,
+        "longitude": -106.8175
+      },
+      "categories": [
+        { "id": 8, "name": "Nature" },
+        { "id": 9, "name": "Cabin" }
+      ]
+    }
+  ],
+  "categories": [
+    { "id": 1, "name": "City" },
+    { "id": 2, "name": "Apartment" },
+    { "id": 3, "name": "Beach" },
+    { "id": 4, "name": "Villa" },
+    { "id": 5, "name": "Countryside" },
+    { "id": 6, "name": "Cottage" },
+    { "id": 7, "name": "Loft" },
+    { "id": 8, "name": "Nature" },
+    { "id": 9, "name": "Cabin" }
+  ]
+}
