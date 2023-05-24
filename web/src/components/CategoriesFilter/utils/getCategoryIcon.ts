@@ -1,6 +1,11 @@
 import { type Category } from "@/types";
-import { FaceIcon } from "@radix-ui/react-icons";
-import { FaCity, FaUmbrellaBeach, FaLeaf, FaBed } from "react-icons/fa";
+import {
+  FaCity,
+  FaUmbrellaBeach,
+  FaLeaf,
+  FaBed,
+  FaSmile,
+} from "react-icons/fa";
 import { MdApartment, MdCottage } from "react-icons/md";
 import { GiBlockHouse, GiWheat } from "react-icons/gi";
 
@@ -23,6 +28,6 @@ export default function getCategoryIcon(category: Category) {
     case "Loft":
       return FaBed;
     default:
-      return FaceIcon;
+      return FaSmile;
   }
 }
