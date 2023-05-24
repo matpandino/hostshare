@@ -4,9 +4,8 @@ export const revalidate = 5 * 60; // Page will revalidate data every 5 minutes
 
 export default function Page() {
   return (
-    <div>
+    <div className="flex flex-col items-center">
       <h1>Homes</h1>
-      Cozy Studio Apartment
       {/* @ts-expect-error Server Component */}
       <Properties />
     </div>
