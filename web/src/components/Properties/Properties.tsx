@@ -10,7 +10,7 @@ export async function Properties() {
   const properties = (await response.json()) as Property[];
 
   return (
-    <div className="grid-container w-full max-w-[92%] gap-6">
+    <div className="grid-container mt-5 w-full max-w-[92%] gap-6">
       {properties.map((property) => (
         <PropertyCard key={property.id} {...property} />
       ))}

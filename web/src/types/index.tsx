@@ -13,3 +13,5 @@ export interface Property {
   categories: string[];
   image: string;
 }
+
+export type Category = string;

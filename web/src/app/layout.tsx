@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 import { type ReactNode } from "react";
 import { type Metadata } from "next";
 import { Nunito_Sans } from "@next/font/google";
+import CategoriesFilter from "@/components/CategoriesFilter/CategoriesFilter";
 
 const nunitoSans = Nunito_Sans({
   subsets: ["latin"],
@@ -15,8 +16,13 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={nunitoSans.className}>
-      <head />
-      <body>{children}</body>
+      <body>
+        <main>
+          {/* @ts-expect-error Server Component */}
+          <CategoriesFilter />
+          {children}
+        </main>
+      </body>
     </html>
   );
 }

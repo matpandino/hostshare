@@ -16,7 +16,7 @@ export default function PropertyCard(property: Property) {
       </div>
       <div>
         <div className="flex flex-row justify-between font-semibold">
-          <div>{property.location} </div>{" "}
+          <div>{property.location}</div>
           <div className="flex items-center gap-1">
             <StarFilledIcon /> {property.rating}
           </div>
