@@ -1,4 +1,3 @@
-import React from "react";
 import { type Listing } from "@/types";
 import Image from "next/image";
 import { StarFilledIcon } from "@radix-ui/react-icons";
@@ -17,8 +16,9 @@ export default function PropertyCard({ listing }: { listing: Listing }) {
     <div className="flex aspect-square flex-col gap-1">
       <div className="relative h-full w-full">
         <Image
-          className="rounded-xl"
+          className="rounded-xl bg-gray-100 object-cover"
           src={mainImage.url}
+          loading="eager"
           alt={`${title} image`}
           fill
         />
@@ -34,14 +34,15 @@ export default function PropertyCard({ listing }: { listing: Listing }) {
         </div>
         {host?.name ? (
           <div className="mt-1 flex flex-row justify-between break-words text-neutral-600">
-            <div>Stay with {host.name}</div>{" "}
-            <div>
+            <div>Stay with {host.name}</div>
+            <div className="flex">
               <Image
+                className="rounded-full bg-gray-100 object-cover"
                 src={host.avatar.url}
+                loading="eager"
                 alt="host profile picture"
-                width="30"
-                height="30"
-                className="rounded-full"
+                width="28"
+                height="28"
               />
             </div>
           </div>

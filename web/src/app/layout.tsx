@@ -1,4 +1,5 @@
 import "@/styles/globals.css";
+import "react-loading-skeleton/dist/skeleton.css";
 import { type ReactNode } from "react";
 import { type Metadata } from "next";
 import { Nunito_Sans } from "@next/font/google";

@@ -2,7 +2,7 @@ import PropertyCard from "./components/PropertyCard";
 import { type Listing } from "@/types";
 
 export async function Properties() {
-  const response = await fetch("http://localhost:3003/data", {
+  const response = await fetch("http://localhost:3003/data?_page=1&_limit=32", {
     // Cache per user
     cache: "no-store",
   });
