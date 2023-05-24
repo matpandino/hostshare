@@ -1,9 +1,9 @@
 import "@/styles/globals.css";
 import { type ReactNode } from "react";
 import { type Metadata } from "next";
-import { Raleway } from "@next/font/google";
+import { Nunito_Sans } from "@next/font/google";
 
-const raleway = Raleway({
+const nunitoSans = Nunito_Sans({
   subsets: ["latin"],
   display: "swap",
 });
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={raleway.className}>
+    <html lang="en" className={nunitoSans.className}>
       <head />
       <body>{children}</body>
     </html>
