@@ -6,7 +6,7 @@ export default async function CategoriesFilter() {
   const categories = (await response.json()) as Category[];
 
   return (
-    <div className="flex w-full max-w-[92%] justify-center">
+    <div className="flex w-full max-w-[92%] justify-center overflow-x-auto">
       {categories.map((category) => {
         return <CategoryItem key={category.id} category={category} />;
       })}
