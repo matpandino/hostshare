@@ -7,8 +7,8 @@ export default async function CategoriesFilter() {
 
   return (
     <div className="flex w-full max-w-[92%] justify-center">
-      {categories.map((category, index) => {
-        return <CategoryItem key={index} category={category} />;
+      {categories.map((category) => {
+        return <CategoryItem key={category.id} category={category} />;
       })}
     </div>
   );

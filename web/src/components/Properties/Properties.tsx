@@ -1,18 +1,18 @@
 import PropertyCard from "./components/PropertyCard";
-import { type Property } from "@/types";
+import { type Listing } from "@/types";
 
 export async function Properties() {
-  const response = await fetch("http://localhost:3003/properties", {
+  const response = await fetch("http://localhost:3003/data", {
     // Cache per user
     cache: "no-store",
   });
 
-  const properties = (await response.json()) as Property[];
+  const listings = (await response.json()) as Listing[];
 
   return (
     <div className="grid-container mt-5 w-full max-w-[92%] gap-6">
-      {properties.map((property) => (
-        <PropertyCard key={property.id} {...property} />
+      {listings.map((listing) => (
+        <PropertyCard key={listing.info.id} listing={listing} />
       ))}
     </div>
   );

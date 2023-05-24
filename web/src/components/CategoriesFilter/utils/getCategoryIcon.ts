@@ -10,7 +10,7 @@ import { MdApartment, MdCottage } from "react-icons/md";
 import { GiBlockHouse, GiWheat } from "react-icons/gi";
 
 export default function getCategoryIcon(category: Category) {
-  switch (category) {
+  switch (category.title) {
     case "City":
       return FaCity;
     case "Apartment":

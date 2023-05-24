@@ -6,7 +6,7 @@ export default function CategoryItem({ category }: { category: Category }) {
   return (
     <div className="flex w-24 cursor-pointer flex-col items-center justify-center gap-3 p-2 text-gray-600 hover:text-black hover:shadow-md">
       <div>{<Icon size={20} />}</div>
-      <span className="text-xs font-semibold">{category}</span>
+      <span className="text-xs font-semibold">{category.title}</span>
     </div>
   );
 }
