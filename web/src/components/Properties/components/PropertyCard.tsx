@@ -7,7 +7,7 @@ export default function PropertyCard({ listing }: { listing: Listing }) {
   const {
     mainImage,
     title,
-    location: { city },
+    location: { city, country },
     ratings: { guestSatisfactionOverall },
     host,
     price,
@@ -25,14 +25,29 @@ export default function PropertyCard({ listing }: { listing: Listing }) {
       </div>
       <div>
         <div className="flex flex-row justify-between font-semibold">
-          <div>{city}</div>
+          <div>
+            {city}, {country.code}
+          </div>
           <div className="flex items-center gap-1">
             <StarFilledIcon /> {guestSatisfactionOverall}
           </div>
         </div>
-        <div className="flex flex-col break-words text-neutral-600">
-          {host?.name}
-        </div>
+        {host?.name ? (
+          <div className="mt-1 flex flex-row justify-between break-words text-neutral-600">
+            <div>Stay with {host.name}</div>{" "}
+            <div>
+              <Image
+                src={host.avatar.url}
+                alt="host profile picture"
+                width="30"
+                height="30"
+                className="rounded-full"
+              />
+            </div>
+          </div>
+        ) : (
+          <div className="h-8" />
+        )}
         <div className="flex flex-row justify-between font-bold">
           <div>
             ${price} <span className="font-medium">night</span>
