@@ -1,10 +1,9 @@
 import "@/styles/globals.css";
 import { type ReactNode } from "react";
 import { type Metadata } from "next";
-import { Ubuntu } from "@next/font/google";
+import { Raleway } from "@next/font/google";
 
-const montserrat = Ubuntu({
-  weight: ["300"],
+const raleway = Raleway({
   subsets: ["latin"],
   display: "swap",
 });
@@ -15,7 +14,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className={montserrat.className}>
+    <html lang="en" className={raleway.className}>
       <head />
       <body>{children}</body>
     </html>
