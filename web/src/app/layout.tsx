@@ -24,7 +24,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           {/* @ts-expect-error Server Component */}
           <CategoriesFilter />
         </header>
-        <main>{children}</main>
+        <main className="flex flex-1 justify-center">{children}</main>
       </body>
     </html>
   );

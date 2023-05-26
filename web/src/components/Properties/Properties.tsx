@@ -10,7 +10,7 @@ export async function Properties() {
   const listings = (await response.json()) as Listing[];
 
   return (
-    <div className="grid-container mt-5 w-full max-w-[92%] gap-6">
+    <div className="grid-container mt-5 w-full gap-6">
       {listings.map((listing) => (
         <PropertyCard key={listing.info.id} listing={listing} />
       ))}

@@ -9,12 +9,12 @@ const LoadingCard = () => (
       <Skeleton className="h-full w-full" borderRadius={12} />
     </div>
     <div>
-      <Skeleton height={20} width={"100%"} />
+      <Skeleton height={24} width={"100%"} />
       <div className="flex flex-row justify-between">
-        <Skeleton className={"flex"} height={20} width={150} />
-        <Skeleton className={"flex"} height={20} width={20} circle />
+        <Skeleton className={"flex"} height={24} width={150} />
+        <Skeleton className={"flex"} height={24} width={24} circle />
       </div>
-      <Skeleton height={20} width={50} />
+      <Skeleton height={24} width={50} />
     </div>
   </div>
 );
@@ -22,7 +22,7 @@ const LoadingCard = () => (
 export function LoadingProperties({ amount = 32 }: { amount?: number }) {
   const placeholderData = getLoadingAmount(amount);
   return (
-    <div className="grid-container mt-5 w-full max-w-[92%] gap-6">
+    <div className="grid-container mt-4 w-full gap-6">
       {placeholderData.map((listing, index) => (
         <LoadingCard key={index} />
       ))}
