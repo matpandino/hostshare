@@ -1,6 +1,7 @@
 import { type Listing } from "@/types";
 import Image from "next/image";
 import { StarFilledIcon } from "@radix-ui/react-icons";
+import Link from "next/link";
 
 export default function PropertyCard({ listing }: { listing: Listing }) {
   const {
@@ -13,7 +14,10 @@ export default function PropertyCard({ listing }: { listing: Listing }) {
   } = listing.info;
 
   return (
-    <div className="flex aspect-square flex-col gap-1">
+    <Link
+      href={`/property/${listing.info.id}`}
+      className="flex aspect-square flex-col gap-1"
+    >
       <div className="relative h-full w-full">
         <Image
           className="rounded-xl bg-gray-100 object-cover"
@@ -55,6 +59,6 @@ export default function PropertyCard({ listing }: { listing: Listing }) {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
