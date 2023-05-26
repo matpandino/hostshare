@@ -19,7 +19,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={nunitoSans.className}>
       <body>
-        <header className="sticky top-0 z-50 flex flex-col items-center border-b border-gray-200 bg-white">
+        <header className="sticky top-0 z-50 flex h-header max-h-header max-w-[vw] flex-col items-center border-b border-gray-200 bg-white">
           <Search />
           {/* @ts-expect-error Server Component */}
           <CategoriesFilter />
