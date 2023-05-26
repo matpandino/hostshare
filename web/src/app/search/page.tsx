@@ -3,7 +3,7 @@ import { Properties } from "@/components/Properties";
 
 export default function Page() {
   return (
-    <div className="relative flex max-w-full flex-1 justify-center">
+    <div className="relative flex max-w-full flex-1 justify-center px-5 md:px-0">
       <div className="flex w-full md:w-full md:px-5">
         {/* @ts-expect-error Server Component */}
         <Properties />
