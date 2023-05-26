@@ -1,19 +1,3 @@
-export interface Property {
-  id: number;
-  title: string;
-  description: string;
-  price: number;
-  location: string;
-  amenities: string[];
-  rating: number;
-  coordinates: {
-    latitude: number;
-    longitude: number;
-  };
-  categories: string[];
-  image: string;
-}
-
 export interface Category {
   id: string;
   type: string;
@@ -84,6 +68,7 @@ type SleepingArrangement = {
 
 export interface Listing {
   ref: string;
+  category?: string;
   info: {
     type: string;
     images: {
