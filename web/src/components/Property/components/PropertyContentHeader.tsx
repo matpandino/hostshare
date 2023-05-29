@@ -10,7 +10,7 @@ export default function PropertyContentHeader({
   listing: { info },
 }: PropertyContentHeaderProps) {
   return (
-    <div className="flex-col gap-2">
+    <div className="flex flex-col gap-2">
       <div className="flex w-full justify-start">
         <h1 className="text-2xl font-semibold">{info.title}</h1>
       </div>
@@ -20,7 +20,7 @@ export default function PropertyContentHeader({
             {<StarFilledIcon />} {info.ratings.value}
           </div>
           &bull;
-          {info.host.isSuperhost ? (
+          {info.host?.isSuperhost ? (
             <>
               <div className="flex">Superhost</div>&bull;
             </>

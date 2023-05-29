@@ -18,21 +18,50 @@ export default async function Page({
   const listings = (await response.json()) as Listing[];
   const propertyData = listings[0];
 
-  if (!propertyData) return <div>nothing</div>;
+  if (!propertyData) return <div className="mt-10">Property not found</div>;
 
   const { info } = propertyData;
 
   return (
-    <div className="flex h-full w-full max-w-[92%] flex-col gap-4 p-4">
+    <div className="flex h-full w-full max-w-[92%] flex-col gap-8 py-8">
       <PropertyContentHeader listing={propertyData} />
-      <div className="h-96 w-full bg-red-300"></div>
+      <div className="flex h-44 w-full gap-2 sm:h-80 md:h-96">
+        <div className="h-full w-full md:w-1/2 ">
+          <div className="relative h-full w-full">
+            <Image
+              className="rounded-xl bg-gray-100 object-cover"
+              src={info.mainImage.url}
+              loading="eager"
+              quality={90}
+              alt={`image`}
+              fill
+            />
+          </div>
+        </div>
+        <div className="hidden md:grid md:w-1/2 md:grid-cols-2 md:gap-2 ">
+          {info.images.data.slice(1, 5).map((image) => (
+            <div className="flex flex-col" key={image.url}>
+              <div className="relative h-full w-full">
+                <Image
+                  className="rounded-xl bg-gray-100 object-cover"
+                  src={image.url}
+                  loading="eager"
+                  quality={80}
+                  alt={`image`}
+                  fill
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
       {/* main description */}
-      <div className="flex gap-6">
-        <div className="flex w-3/5 flex-col gap-4">
+      <div className="flex gap-10">
+        <div className="flex w-3/5 flex-col gap-8">
           <div className="flex items-center justify-between gap-2">
             <div className="flex flex-col">
               <h2 className="text-xl font-semibold">
-                Hosted by {info.host.name}
+                Hosted by {info.host?.name}
               </h2>
               <ol className="flex gap-1 text-sm">
                 {info.details.data.map((detail, index) => (
@@ -46,7 +75,7 @@ export default async function Page({
             <div className="flex">
               <Image
                 className="rounded-full bg-gray-100 object-cover"
-                src={info.host.avatar.url}
+                src={info.host?.avatar?.url}
                 loading="eager"
                 alt="host profile picture"
                 width="48"
@@ -67,16 +96,32 @@ export default async function Page({
 
         <ReservationWidget listing={propertyData} />
       </div>
-      <div className="flex h-96 w-full ">
-        <Map
-          initialViewState={{
-            longitude: info.location.long,
-            latitude: info.location.lat,
-            zoom: 14,
-          }}
-        >
-          <Marker latitude={info.location.lat} longitude={info.location.long} />
-        </Map>
+      <div>
+        <hr className="w-full" />
+      </div>
+
+      <div className="flex w-full flex-col gap-3">
+        <h2 className="text-xl font-semibold">Where you’ll be</h2>
+        <div className="flex h-96">
+          <Map
+            initialViewState={{
+              longitude: info.location.long,
+              latitude: info.location.lat,
+              zoom: 14,
+            }}
+          >
+            <Marker
+              latitude={info.location.lat}
+              longitude={info.location.long}
+            />
+          </Map>
+        </div>
+
+        <h3 className="text-lg font-bold">
+          {info.location.address ? `${info.location.address}, ` : null}
+          {info.location.city ? `${info.location.city}, ` : null}
+          {info.location.country.title}
+        </h3>
       </div>
     </div>
   );

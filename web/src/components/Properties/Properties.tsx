@@ -1,14 +1,15 @@
 import PropertyCard from "./components/PropertyCard";
 import { type Listing } from "@/types";
+export const dynamic = "force-dynamic";
 
 interface PropertiesProps {
-  listings?: Listing[];
+  listings: Listing[];
 }
 
 export function Properties({ listings }: PropertiesProps) {
   return (
     <div className="grid-container mt-5 w-full gap-6">
-      {listings?.map((listing) => (
+      {listings.map((listing) => (
         <PropertyCard key={listing.info.id} listing={listing} />
       ))}
     </div>
