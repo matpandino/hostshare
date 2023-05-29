@@ -11,6 +11,7 @@ export default function PropertyCard({ listing }: { listing: Listing }) {
     ratings: { guestSatisfactionOverall },
     host,
     price,
+    currency,
   } = listing.info;
 
   return (
@@ -55,7 +56,8 @@ export default function PropertyCard({ listing }: { listing: Listing }) {
         )}
         <div className="flex flex-row justify-between font-bold">
           <div>
-            ${price} <span className="font-medium">night</span>
+            {currency.symbol}
+            {price} <span className="font-medium">night</span>
           </div>
         </div>
       </div>
