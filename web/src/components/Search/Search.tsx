@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React from "react";
+import { Suspense } from "react";
 import SearchInput from "./components/SearchInput";
 import Link from "next/link";
 
@@ -16,7 +16,9 @@ export default function Search() {
           />
         </Link>
       </div>
-      <SearchInput />
+      <Suspense fallback="...">
+        <SearchInput />
+      </Suspense>
       <div className="hidden flex-1 justify-end md:flex">
         <span className="block">Profile</span>
       </div>
