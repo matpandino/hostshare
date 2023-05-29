@@ -1,19 +1,17 @@
 import { Properties } from "@/components/Properties";
 import { type Listing } from "@/types";
 
+interface RootPageProps {
+  searchParams: { categoryId?: string };
+}
+
 export default async function Page({
   searchParams: { categoryId },
-}: {
-  searchParams: { categoryId?: string };
-}) {
+}: RootPageProps) {
   const response = await fetch(
     `http://localhost:3003/data?${
       categoryId ? `category=${categoryId}&` : ""
-    }&_limit=32`,
-    {
-      // Cache per user
-      cache: "no-store",
-    }
+    }&_limit=32`
   );
 
   const listings = (await response.json()) as Listing[];

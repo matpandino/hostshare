@@ -3,18 +3,25 @@ import PriceMarker from "@/components/Map/PriceMarker";
 import { Properties } from "@/components/Properties";
 import { type Listing } from "@/types";
 
-export default async function Page({ categoryId }: { categoryId: string }) {
+interface SearchPageProps {
+  searchParams: { location?: string };
+}
+
+export default async function Page({
+  searchParams: { location },
+}: SearchPageProps) {
+  const url = new URL("http://localhost:3003/data");
+  const params = new URLSearchParams(url.search);
+
+  location && params.set("info.location.city_like", location);
+
   const response = await fetch(
-    `http://localhost:3003/data?${
-      categoryId ? `category=${categoryId}&` : ""
-    }&_limit=32`,
-    {
-      // Cache per user
-      cache: "no-store",
-    }
+    `http://localhost:3003/data?_limit=32&${params.toString()}`
   );
 
   const listings = (await response.json()) as Listing[];
+
+  if (!listings) return null;
 
   return (
     <div className="relative flex max-w-full flex-1 justify-center px-5 md:px-0">
