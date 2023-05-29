@@ -10,14 +10,14 @@ interface SearchPageProps {
 export default async function Page({
   searchParams: { location },
 }: SearchPageProps) {
-  const url = new URL("http://localhost:3003/data");
+  // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+  const url = new URL(`${process.env.NEXT_PUBLIC_API}/data`);
   const params = new URLSearchParams(url.search);
 
   location && params.set("info.location.city_like", location);
+  location && params.set("_limit", "32");
 
-  const response = await fetch(
-    `http://localhost:3003/data?_limit=32&${params.toString()}`
-  );
+  const response = await fetch(`${url.href}?${params.toString()}`);
 
   const listings = (await response.json()) as Listing[];
 

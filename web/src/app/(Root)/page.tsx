@@ -9,7 +9,8 @@ export default async function Page({
   searchParams: { categoryId },
 }: RootPageProps) {
   const response = await fetch(
-    `http://localhost:3003/data?${
+    // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+    `${process.env.NEXT_PUBLIC_API}/data?${
       categoryId ? `category=${categoryId}&` : ""
     }&_limit=32`
   );

@@ -17,6 +17,7 @@ export const env = createEnv({
    */
   client: {
     NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN: z.string().min(1),
+    NEXT_PUBLIC_API: z.string().nonempty().min(1),
   },
 
   /**
@@ -27,5 +28,6 @@ export const env = createEnv({
     NODE_ENV: process.env.NODE_ENV,
     NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN:
       process.env.NEXT_PUBLIC_MAPBOX_ACCESS_TOKEN,
+    NEXT_PUBLIC_API: process.env.NEXT_PUBLIC_API,
   },
 });

@@ -3,7 +3,8 @@ import CategoryItem from "./component/CategoryItem";
 
 export default async function CategoriesFilter() {
   const response = await fetch(
-    "http://localhost:3003/categories?_page=1&_limit=32"
+    // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+    `${process.env.NEXT_PUBLIC_API}/categories?_page=1&_limit=32`
   );
 
   const categories = (await response.json()) as Category[];
