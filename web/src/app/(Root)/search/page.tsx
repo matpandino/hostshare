@@ -28,12 +28,13 @@ export default async function Page({ categoryId }: { categoryId: string }) {
             longitude: listings?.[0]?.info?.location?.long,
             zoom: 3,
           }}
+          mapStyle="mapbox://styles/mapbox/light-v8"
         >
           {listings.map((listing) => (
             <PriceMarker
               href={`/property/${listing.info.id}`}
               contentPrice={
-                <div className="rounded-xl border border-gray-700 bg-white px-1 text-sm hover:border-gray-400 hover:bg-gray-100">
+                <div className="rounded-3xl border border-gray-400 bg-white px-2 py-1 text-sm font-bold hover:border-gray-700 hover:bg-gray-100">
                   {listing.info.currency.symbol}
                   {listing.info.price}
                 </div>
