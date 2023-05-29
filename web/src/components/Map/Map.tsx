@@ -3,7 +3,7 @@ import GlMap from "react-map-gl";
 
 export default function Map() {
   return (
-    <div className={`flex w-full flex-col items-center bg-gray-200`}>
+    <div className="flex w-full flex-col items-center bg-gray-200">
       <GlMap
         initialViewState={{
           longitude: -122.4,
