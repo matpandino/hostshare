@@ -1,5 +1,5 @@
 import Map from "@/components/Map/Map";
-import Marker from "@/components/Map/Marker";
+import PriceMarker from "@/components/Map/PriceMarker";
 import { Properties } from "@/components/Properties";
 import { type Listing } from "@/types";
 
@@ -30,7 +30,14 @@ export default async function Page({ categoryId }: { categoryId: string }) {
           }}
         >
           {listings.map((listing) => (
-            <Marker
+            <PriceMarker
+              href={`/property/${listing.info.id}`}
+              contentPrice={
+                <div className="rounded-xl border border-gray-700 bg-white px-1 text-sm hover:border-gray-400 hover:bg-gray-100">
+                  {listing.info.currency.symbol}
+                  {listing.info.price}
+                </div>
+              }
               key={listing.info.id}
               latitude={listing.info.location.lat}
               longitude={listing.info.location.long}
