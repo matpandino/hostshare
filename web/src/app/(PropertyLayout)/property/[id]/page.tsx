@@ -1,3 +1,5 @@
+import Map from "@/components/Map/Map";
+import Marker from "@/components/Map/Marker";
 import AmenitiesSection from "@/components/Property/components/AmenitiesSection";
 import PropertyContentHeader from "@/components/Property/components/PropertyContentHeader";
 import ReservationWidget from "@/components/ReservationWidget/ReservationWidget";
@@ -64,6 +66,17 @@ export default async function Page({
         </div>
 
         <ReservationWidget listing={propertyData} />
+      </div>
+      <div className="flex h-96 w-full ">
+        <Map
+          initialViewState={{
+            longitude: info.location.long,
+            latitude: info.location.lat,
+            zoom: 14,
+          }}
+        >
+          <Marker latitude={info.location.lat} longitude={info.location.long} />
+        </Map>
       </div>
     </div>
   );

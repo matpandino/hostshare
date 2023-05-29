@@ -79,7 +79,7 @@ export default function SearchInput() {
           min={1}
           max={Number.POSITIVE_INFINITY}
         />
-        <span> guest{guestCount > 1 ? "s" : ""}</span>
+        <span> guest{guestCount === 1 ? "s" : ""}</span>
       </div>
 
       <Link
