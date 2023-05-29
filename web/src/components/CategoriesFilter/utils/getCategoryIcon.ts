@@ -2,9 +2,7 @@ import { type Category } from "@/types";
 import {
   FaCity,
   FaUmbrellaBeach,
-  FaLeaf,
   FaBed,
-  FaSmile,
   FaSwimmingPool,
   FaSkating,
   FaQuestion,
