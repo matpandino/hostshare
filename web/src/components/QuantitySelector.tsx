@@ -35,7 +35,7 @@ const QuantitySelector: FC<QuantitySelectorProps> = ({
       >
         -
       </button>
-      <span className="px-1 text-sm font-semibold">
+      <span className="w-6 px-1 text-center text-sm font-semibold">
         {value} {afterValue}
       </span>
       <button
