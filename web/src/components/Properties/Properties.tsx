@@ -1,6 +1,5 @@
 import PropertyCard from "./components/PropertyCard";
 import { type Listing } from "@/types";
-export const dynamic = "force-dynamic";
 
 interface PropertiesProps {
   listings: Listing[];
