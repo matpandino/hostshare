@@ -25,7 +25,7 @@ export default async function Page({
   return (
     <div className="flex h-full w-full max-w-[92%] flex-col gap-8 py-8 sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl">
       <PropertyContentHeader listing={propertyData} />
-      <div className="flex h-44 w-full gap-2 sm:h-80 md:h-[560px]">
+      <div className="flex h-80 w-full gap-2 sm:h-80 md:h-[560px]">
         <div className="h-full w-full md:w-1/2 ">
           <div className="relative h-full w-full">
             <Image
