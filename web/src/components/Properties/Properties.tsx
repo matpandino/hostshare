@@ -1,5 +1,5 @@
 import PropertyCard from "./components/PropertyCard";
-import { Category, type Listing } from "@/types";
+import { type Category, type Listing } from "@/types";
 export const dynamic = "force-dynamic";
 
 export async function generateStaticParams() {
