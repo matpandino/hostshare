@@ -5,8 +5,8 @@ import Link from "next/link";
 
 export default function Search() {
   return (
-    <div className="flex h-20 w-full max-w-[92%] flex-row items-center justify-between">
-      <div className="flex-1">
+    <div className="flex h-20 w-full max-w-[92%] flex-row  items-center justify-center gap-2 md:justify-between">
+      <div className="hidden flex-1 md:flex">
         <Link href="/" prefetch={false}>
           <Image
             src="/hostshare-green.png"
@@ -17,7 +17,7 @@ export default function Search() {
         </Link>
       </div>
       <SearchInput />
-      <div className="flex flex-1 justify-end">
+      <div className="hidden flex-1 justify-end md:flex">
         <span className="block">Profile</span>
       </div>
     </div>

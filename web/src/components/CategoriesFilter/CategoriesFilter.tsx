@@ -10,7 +10,7 @@ export default async function CategoriesFilter() {
 
   return (
     <div className="flex w-[92%] justify-center overflow-auto">
-      {categories.map((category) => {
+      {categories.slice(0, 12).map((category) => {
         return <CategoryItem key={category.id} category={category} />;
       })}
     </div>
