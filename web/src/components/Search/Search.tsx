@@ -7,7 +7,7 @@ export default function Search() {
   return (
     <div className="flex h-20 w-full max-w-[92%] flex-row items-center justify-between">
       <div className="flex-1">
-        <Link href="/">
+        <Link href="/" prefetch={false}>
           <Image
             src="/hostshare-green.png"
             alt="hostshare green logo"

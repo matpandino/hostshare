@@ -8,6 +8,7 @@ export default function SearchInput() {
       <input className="focus:outline-none" placeholder="Search..." />
       <Link
         href="/search"
+        prefetch={false}
         className="flex aspect-square h-8 items-center justify-center rounded-full bg-primary text-white"
       >
         <FaSearch />
