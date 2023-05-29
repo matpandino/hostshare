@@ -9,6 +9,7 @@ export default {
       },
       height: {
         header: "145px",
+        smallHeader: "90px",
       },
       colors: {
         primary: "#329a9a",

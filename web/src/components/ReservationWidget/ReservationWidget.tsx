@@ -9,7 +9,7 @@ export default function ReservationWidget({
   listing: { info },
 }: ReservationWidgetProps) {
   return (
-    <div className=" stick min-h-48 flex max-h-96 w-2/5 rounded-xl border p-4 shadow-lg">
+    <div className=" border-1 sticky top-[theme(height.header)] flex h-96 w-1/3 rounded-xl bg-red-200 p-5">
       <div>
         <span className="text-2xl font-bold">
           {info.currency.symbol}

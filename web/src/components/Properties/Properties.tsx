@@ -25,7 +25,6 @@ export async function Properties({ categoryId }: { categoryId: string }) {
     }
   );
 
-  console.log("xxxxxxxxxxxxxxx categoryId", categoryId);
   const listings = (await response.json()) as Listing[];
 
   return (
