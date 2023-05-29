@@ -2,9 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --primary-color: #329a9a;
+  --primary-color-dark: #216060;
+}
+
 @layer utilities {
   .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
   }
+}
+
+.rdp {
+  --rdp-accent-color: var(--primary-color);
+  --rdp-accent-color-dark: var(--primary-color-dark);
+  --rdp-background-color: rgba(0, 0, 0, 0.22);
+}
+.rdp-day_selected {
+  background-color: var(--rdp-accent-color);
 }

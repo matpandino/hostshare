@@ -12,7 +12,7 @@ export default {
         smallHeader: "90px",
       },
       colors: {
-        primary: "#329a9a",
+        primary: "var(--primary-color)",
       },
     },
   },
