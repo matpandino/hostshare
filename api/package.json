@@ -1,0 +1,10 @@
+{
+  "name": "restful-api-vercel",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "json-server": "^0.17.1"
+  }
+}
