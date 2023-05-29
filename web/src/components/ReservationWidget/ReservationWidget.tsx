@@ -2,7 +2,7 @@
 import { type Listing } from "@/types";
 import { format } from "date-fns";
 import React, { useRef, useState } from "react";
-import { DayPicker } from "react-day-picker";
+import { type DateRange, DayPicker } from "react-day-picker";
 import { useOnClickOutside } from "usehooks-ts";
 import QuantitySelector from "../QuantitySelector";
 
