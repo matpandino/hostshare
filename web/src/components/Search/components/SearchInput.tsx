@@ -8,6 +8,8 @@ import { format } from "date-fns";
 import { useOnClickOutside } from "usehooks-ts";
 import QuantitySelector from "@/components/QuantitySelector";
 
+const today = new Date();
+
 export default function SearchInput() {
   const ref = useRef(null);
 
@@ -22,8 +24,6 @@ export default function SearchInput() {
     defaultSelected
   );
   const [guestCount, setGuestCount] = useState(1);
-
-  const today = new Date();
 
   const handleClickOutside = () => setIsDatePickerOpen(false);
 

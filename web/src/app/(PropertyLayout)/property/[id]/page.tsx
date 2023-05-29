@@ -55,7 +55,7 @@ export default async function Page({
       </div>
       {/* main description */}
       <div className="flex gap-10">
-        <div className="flex w-3/5 flex-col gap-8">
+        <div className="flex w-1/2 flex-col gap-8 lg:w-2/3">
           <div className="flex items-center justify-between gap-2">
             <div className="flex flex-col">
               <h2 className="text-xl font-semibold">
