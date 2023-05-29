@@ -4,17 +4,19 @@ const getLoadingAmount = (amount: number) =>
   new Array(amount).fill(1) as number[];
 
 const LoadingCard = () => (
-  <div className="flex aspect-square flex-col gap-1">
-    <div className="relative h-full w-full ">
+  <div className="flex aspect-square flex-col">
+    <div className="relative mb-1 h-full w-full">
       <Skeleton className="h-full w-full" borderRadius={12} />
     </div>
-    <div>
-      <Skeleton height={24} width={"100%"} />
-      <div className="flex flex-row justify-between">
-        <Skeleton className={"flex"} height={24} width={150} />
-        <Skeleton className={"flex"} height={24} width={24} circle />
+    <div className="flex flex-col">
+      <Skeleton height={20} width={"100%"} />
+      <div className="mb-1 flex h-7 flex-row justify-between">
+        <Skeleton height="100%" width={150} />
+        <Skeleton height="100%" width={28} circle />
       </div>
-      <Skeleton height={24} width={50} />
+      <div>
+        <Skeleton height={20} width={50} />
+      </div>
     </div>
   </div>
 );
