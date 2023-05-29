@@ -5,29 +5,31 @@ import {
   FaLeaf,
   FaBed,
   FaSmile,
+  FaSwimmingPool,
+  FaSkating,
+  FaQuestion,
 } from "react-icons/fa";
-import { MdApartment, MdCottage } from "react-icons/md";
-import { GiBlockHouse, GiWheat } from "react-icons/gi";
+import { GiBlockHouse, GiDuck, GiWheat } from "react-icons/gi";
 
 export default function getCategoryIcon(category: Category) {
-  switch (category.title) {
-    case "City":
-      return FaCity;
-    case "Apartment":
-      return MdApartment;
-    case "Beach":
+  switch (category.id) {
+    case "677":
+      return FaSwimmingPool;
+    case "789":
       return FaUmbrellaBeach;
-    case "Villa":
+    case "8535":
+      return FaCity;
+    case "5348":
       return GiBlockHouse;
-    case "Countryside":
+    case "4104":
       return GiWheat;
-    case "Cottage":
-      return MdCottage;
-    case "Nature":
-      return FaLeaf;
-    case "Loft":
+    case "7765":
+      return FaSkating;
+    case "8144":
+      return GiDuck;
+    case "8678":
       return FaBed;
     default:
-      return FaSmile;
+      return FaQuestion;
   }
 }
