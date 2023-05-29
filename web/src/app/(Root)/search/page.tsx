@@ -15,7 +15,7 @@ export default async function Page({
   const params = new URLSearchParams(url.search);
 
   location && params.set("info.location.city_like", location);
-  location && params.set("_limit", "32");
+  params.set("_limit", "32");
 
   const response = await fetch(`${url.href}?${params.toString()}`);
 
