@@ -12,7 +12,8 @@ export default async function Page({
   params: { id: string };
 }) {
   const response = await fetch(
-    `http://localhost:3003/data?info.id=${id}&_limit=1`
+    // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
+    `${process.env.NEXT_PUBLIC_API}/data?info.id=${id}&_limit=1`
   );
 
   const listings = (await response.json()) as Listing[];
