@@ -23,16 +23,15 @@ export default async function Page({
   const { info } = propertyData;
 
   return (
-    <div className="flex h-full w-full max-w-[92%] flex-col gap-8 py-8">
+    <div className="flex h-full w-full max-w-[92%] flex-col gap-8 py-8 sm:max-w-xl md:max-w-2xl lg:max-w-4xl xl:max-w-6xl">
       <PropertyContentHeader listing={propertyData} />
-      <div className="flex h-44 w-full gap-2 sm:h-80 md:h-96">
+      <div className="flex h-44 w-full gap-2 sm:h-80 md:h-[560px]">
         <div className="h-full w-full md:w-1/2 ">
           <div className="relative h-full w-full">
             <Image
               className="rounded-xl bg-gray-100 object-cover"
               src={info.mainImage.url}
               loading="eager"
-              quality={90}
               alt={`image`}
               fill
             />
@@ -46,7 +45,6 @@ export default async function Page({
                   className="rounded-xl bg-gray-100 object-cover"
                   src={image.url}
                   loading="eager"
-                  quality={80}
                   alt={`image`}
                   fill
                 />
