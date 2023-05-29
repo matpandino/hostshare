@@ -21,7 +21,7 @@ export default function SearchInput() {
   const [selected, setSelected] = useState<DateRange | undefined>(
     defaultSelected
   );
-  const [guestCount, setGuestCount] = useState(0);
+  const [guestCount, setGuestCount] = useState(1);
 
   const today = new Date();
 
@@ -79,7 +79,7 @@ export default function SearchInput() {
           min={1}
           max={Number.POSITIVE_INFINITY}
         />
-        <span> guest{guestCount === 1 ? "s" : ""}</span>
+        <span> guest{guestCount !== 1 ? "s" : ""}</span>
       </div>
 
       <Link
