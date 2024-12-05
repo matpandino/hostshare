@@ -1,4 +1,4 @@
-# HostShare code challenge
+# HostShare 
 
 ## Running the server
 
